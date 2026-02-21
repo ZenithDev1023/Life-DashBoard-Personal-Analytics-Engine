@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 import service.finance.FinanceService;
-import views.*;
+
+import views.finance.ExpenseView;
+import views.finance.BudgetView;
 
 public class FinanceModule {
     // Fields

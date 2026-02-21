@@ -3,6 +3,11 @@ import java.util.Scanner;
 import service.dashboard.DashboardService;
 import persistence.CsvManager;
 
+import module.FinanceModule;
+import module.HealthModule;
+import module.LearningModule;
+import module.RelationshipModule;
+
 public class Main {
     public static void main(String[] args) {
 

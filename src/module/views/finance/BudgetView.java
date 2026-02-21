@@ -1,4 +1,4 @@
-package views;
+package views.finance;
 
 public class BudgetView {
     

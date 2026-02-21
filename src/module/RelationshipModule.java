@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 import views.*;
+import views.relationship.ContactView;
+import views.relationship.InteractionView;
 import service.Relationship.RelationShipService;
 
 public class RelationshipModule {

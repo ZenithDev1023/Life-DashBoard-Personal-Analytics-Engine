@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 import service.health.HealthService;
 import views.*;
+import views.health.MealView;
+import views.health.WorkoutView;
 
 public class HealthModule {
     // Fields

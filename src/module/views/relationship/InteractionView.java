@@ -1,4 +1,4 @@
-package views;
+package views.relationship;
 
 public class InteractionView {
     
