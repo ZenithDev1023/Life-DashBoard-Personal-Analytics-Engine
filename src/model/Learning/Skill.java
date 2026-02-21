@@ -1,4 +1,4 @@
-package model.Learning;
+package model.learning;
 
 import utils.validation.ValidateLearning;
 

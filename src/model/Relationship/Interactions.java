@@ -1,4 +1,4 @@
-package model.Relationship;
+package model.relationship;
 
 import java.time.LocalDateTime;
 

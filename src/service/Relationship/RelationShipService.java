@@ -1,9 +1,10 @@
 package service.Relationship;
 
 import java.util.List;
-import java.util.ArrayList;
 
-import model.Relationship.*;
+import model.relationship.*;
+
+import java.util.ArrayList;
 
 public class RelationShipService {
     // Fields

@@ -12,7 +12,9 @@ public class Income {
     private LocalDate date = null;
     private boolean recur = true;
 
-    // Constructor
+    // Constructors
+    public Income() {}
+
     public Income(
         String id,
         double amount,
@@ -24,7 +26,6 @@ public class Income {
         ValidateFinance.validateAmount(amount);
         ValidateFinance.validateSource(source);
         ValidateFinance.validateDate(date);
-        ValidateFinance.validateRecur(recur);
 
         this.id = id;
         this.amount = amount;

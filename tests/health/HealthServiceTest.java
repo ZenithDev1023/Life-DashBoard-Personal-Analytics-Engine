@@ -1,5 +1,4 @@
-package tests.finance.health;
+package tests.health;
 
 public class HealthServiceTest {
-    
 }

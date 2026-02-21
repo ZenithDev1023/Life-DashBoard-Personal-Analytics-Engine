@@ -10,11 +10,44 @@ public class FinanceService {
     private List<Income> income = new ArrayList<>();
     private List<Budget> budget = new ArrayList<>();
 
+    Expense e = new Expense();
+    String expenseId = e.getId();
+
+    Income in = new Income();
+    String incomeId = in.getId();
+
+    Budget b = new Budget();
+    String budgetId = b.getId();
+
+
+
+    private int balance;
+
+
+    public FinanceService() {}
+    
+
     public FinanceService(
         List<Expense> expenses,
         List<Income> income,
         List<Budget> budget
     ) {
+        for (int i = 0; i < expenses.size(); i++) {
+            if (expenseId.equals(b.getId())) {
+                throw new IllegalArgumentException("Expense ID already exists!");
+            }
+        }
+        for (int i = 0; i < income.size(); i++) {
+            if (incomeId.equals(in.getId())) {
+                throw new IllegalArgumentException("Income ID already exists!");
+            }
+        }
+        for (int i = 0; i < budget.size(); i++) {
+            if (budgetId.equals(b.getId())) {
+                throw new IllegalArgumentException("Budget ID already exists!");
+            }
+        }
+
         this.expenses = expenses;
         this.income = income;
         this.budget = budget;
@@ -22,8 +55,7 @@ public class FinanceService {
 
 
     // methods
-    public void addExpense() {
-
+    public int addExpense(int amount) {
     }
 
 
@@ -56,4 +88,7 @@ public class FinanceService {
     public List<Expense> getExpenses() { return expenses; }
     public List<Income> getIncome() { return income; }
     public List<Budget> getBudget() { return budget; }
+
+    public int getBalance() { return balance; }
+    public String getId() { return id; }
 }

@@ -13,7 +13,9 @@ public class Expense {
     private LocalDate date = null;
     private String description = "UNASSIGNED";
 
-    // Constructor
+    // Constructors
+    public Expense() {}
+
     public Expense(
         String id,
         double amount,

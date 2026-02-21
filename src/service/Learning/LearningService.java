@@ -1,9 +1,10 @@
 package service.Learning;
 
 import java.util.List;
-import java.util.ArrayList;
 
-import model.Learning.*;
+import model.learning.*;
+
+import java.util.ArrayList;
 
 public class LearningService {
     // Fields

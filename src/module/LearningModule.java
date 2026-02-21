@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 import service.Learning.LearningService;
-import views.*;
 import views.learning.BookView;
 import views.learning.StudyView;
 

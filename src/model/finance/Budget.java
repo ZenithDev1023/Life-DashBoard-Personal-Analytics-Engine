@@ -10,7 +10,10 @@ public class Budget {
     private double spent = 0.0;
     private String period = "UNASSIGNED";
 
-    // Constructor
+    // Constructors
+    public Budget() {}
+
+
     public Budget(
         String id,
         String name, 
