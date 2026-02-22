@@ -8,7 +8,7 @@ import utils.validation.ValidateHealth;
 
 public class Meal {
     // Fields
-    private String id = "UNASSIGNED";
+    private int id = 0;
     private String name = "UNASSIGNED";
     private int calories = 0;
     private MealType type = null;
@@ -16,7 +16,7 @@ public class Meal {
 
     // Constructor
     public Meal (
-            String id,
+            int id,
             String name,
             int calories,
             MealType type,
@@ -37,14 +37,14 @@ public class Meal {
 
 
     // Getters
-    public String getId() { return id; }
+    public int getId() { return id; }
     public String getName() { return name; }
     public int getCalories() { return calories; }
     public MealType getType() { return type; }
     public LocalDateTime getTime() { return time; }
 
     // Setters
-    public void setId(String id) { this.id = id; }
+    public void setId(int id) { this.id = id; }
     public void setName(String name) { this.name = name; }
     public void setCalories(int calories) { this.calories = calories; }
     public void setType(MealType type) { this.type = type; }
@@ -53,7 +53,7 @@ public class Meal {
     @Override
     public String toString() {
         return String.format(
-                "ID: %s, Name: %s, Calories: %d, Type: %s, Time: %s",
+                "ID: %d, Name: %s, Calories: %d, Type: %s, Time: %s",
                 id, name, calories, type, time
         );
     }

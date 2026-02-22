@@ -9,9 +9,9 @@ import java.time.LocalDateTime;
 
 public class ValidateRelationship {
 
-    public static void validateId(String id) {
-        if (id == null || id.trim().isEmpty()) {
-            throw new IllegalArgumentException("ID cannot be null or empty!");
+    public static void validateId(int id) {
+        if (id < 0) {
+            throw new IllegalArgumentException("ID cannot be negative!");
         }
     }
 

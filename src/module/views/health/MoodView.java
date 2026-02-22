@@ -6,8 +6,10 @@ import enums.MoodType;
 
 public class MoodView {
 
-    public void display(String id, MoodType type, int energy, int stress, LocalDateTime time) {
+    public StringBuilder display(int id) {
+        StringBuilder sb = new StringBuilder();
 
+        return sb;
     }
 
     public void showMoodChart() {

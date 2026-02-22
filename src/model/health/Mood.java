@@ -7,7 +7,7 @@ import utils.validation.ValidateHealth;
 
 public class Mood {
     // Fields
-    private String id = "UNASSIGNED";
+    private int id = 0;
     private MoodType type = null;
     private int energy = 0;
     private int stress = 0;
@@ -15,7 +15,7 @@ public class Mood {
 
     // Constructor
     public Mood(
-            String id,
+            int id,
             MoodType type,
             int energy,
             int stress,
@@ -35,14 +35,14 @@ public class Mood {
     }
 
     // Getters
-    public String getId() { return id; }
+    public int getId() { return id; }
     public MoodType getType() { return type; }
     public int getEnergy() { return energy; }
     public int getStress() { return stress; }
     public LocalDateTime getTime() { return time;}
 
     // Setters
-    public void setId(String id) { this.id = id; }
+    public void setId(int id) { this.id = id; }
     public void setType(MoodType type) { this.type = type; }
     public void setEnergy(int energy) { this.energy = energy; }
     public void setStress(int stress) { this.stress = stress; }
@@ -51,7 +51,7 @@ public class Mood {
     @Override
     public String toString() {
         return String.format(
-                "ID: %s, Type: %s, Energy: %d, Stress: %d, Time: %s",
+                "ID: %d, Type: %s, Energy: %d, Stress: %d, Time: %s",
                 id, type, energy, stress, time
         );
     }

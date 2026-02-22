@@ -1,5 +1,7 @@
 package service.Learning;
 
+import java.time.LocalDateTime;
+
 import java.util.List;
 
 import model.learning.*;
@@ -25,7 +27,11 @@ public class LearningService {
 
 
     // methods
-    public void addSession() {
+    public void addSession(int studyId, String subject, String topic, int duration, int comprehension, LocalDateTime time) {
+
+    }
+
+    public void addBook(int id, String title, String author, int pages, int pagesRead, LocalDateTime start, LocalDateTime finish) {
 
     }
 

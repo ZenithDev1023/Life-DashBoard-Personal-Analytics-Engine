@@ -6,7 +6,7 @@ import utils.validation.ValidateHealth;
 
 public class Workout {
     // Fields
-    private String id = "UNASSIGNED";
+    private int id = 0;
     private String exercise = "UNASSIGNED";
     private int duration = 0;
     private int sets = 0;
@@ -14,7 +14,7 @@ public class Workout {
 
     // Constructor
     public Workout(
-        String id,
+        int id,
         String exercise,
         int duration,
         int sets,
@@ -35,14 +35,14 @@ public class Workout {
 
 
     // Getters
-    public String getId() { return id; }
+    public int getId() { return id; }
     public String getExercise() { return exercise; }
     public int getDuration() { return duration; }
     public int getSets() { return sets; }
     public LocalDate getDate() { return date; }
 
     // Setters
-    public void setId(String id) { this.id = id; }
+    public void setId(int id) { this.id = id; }
     public void setExercise(String exercise) { this.exercise = exercise; }
     public void setDuration(int duration) { this.duration = duration; }
     public void setSets(int sets) { this.sets = sets; }
@@ -52,7 +52,7 @@ public class Workout {
     @Override
     public String toString() {
         return String.format(
-            "ID: %s, Exercise: %s, Duration: %d, Sets: %d, Date: %d",
+            "ID: %d, Exercise: %s, Duration: %d, Sets: %d, Date: %d",
             id, exercise, duration, sets, date
 
         );

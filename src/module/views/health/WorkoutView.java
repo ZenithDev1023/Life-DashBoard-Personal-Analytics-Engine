@@ -4,8 +4,10 @@ import java.time.LocalDate;
 
 public class WorkoutView {
     
-    public void display( String id, String exercise, int duration, int sets, LocalDate date) {
+    public StringBuilder display(int id) {
+        StringBuilder sb = new StringBuilder();
 
+        return sb;
     }
 
     public void showProgress() {

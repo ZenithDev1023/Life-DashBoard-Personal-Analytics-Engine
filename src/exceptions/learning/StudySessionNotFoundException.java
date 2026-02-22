@@ -1,4 +1,6 @@
-package exceptions;
+package exceptions.learning;
+
+import exceptions.DashBoardException;
 
 public class StudySessionNotFoundException extends DashBoardException {
     public StudySessionNotFoundException(String message) {

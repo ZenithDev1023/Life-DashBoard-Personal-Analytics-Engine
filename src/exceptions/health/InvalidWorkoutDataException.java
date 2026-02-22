@@ -1,4 +1,6 @@
-package exceptions;
+package exceptions.health;
+
+import exceptions.DashBoardException;
 
 public class InvalidWorkoutDataException extends DashBoardException {
     public InvalidWorkoutDataException(String message) {

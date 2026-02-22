@@ -4,8 +4,10 @@ import java.time.LocalDateTime;
 
 public class BookView {
 
-    public void display(String id, String title, String author, int pages, int pagesRead, LocalDateTime start, LocalDateTime finish) {
+    public StringBuilder display(int id) {
+        StringBuilder sb = new StringBuilder();
 
+        return sb;
     }
 
     public void showReadingList() {

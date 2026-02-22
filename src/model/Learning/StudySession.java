@@ -7,7 +7,7 @@ import utils.validation.ValidateLearning;
 
 public class StudySession {
     // Fields
-    private String id;
+    private int id;
     private String subject;
     private String topic;
     private int duration;
@@ -16,7 +16,7 @@ public class StudySession {
 
     // Constructor
     public StudySession(
-            String id,
+            int id,
             String subject,
             String topic,
             int duration,
@@ -40,7 +40,7 @@ public class StudySession {
 
 
     // Getters
-    public String getId() { return id; }
+    public int getId() { return id; }
     public String getSubject() { return subject; }
     public String getTopic() { return topic; }
     public int getDuration() { return duration; }
@@ -48,7 +48,7 @@ public class StudySession {
     public LocalDateTime getTime() { return time; }
 
     // Setters
-    public void setId(String id) { this.id = id; }
+    public void setId(int id) { this.id = id; }
     public void setSubject(String subject) { this.subject = subject; }
     public void setTopic(String topic) { this.topic = topic; }
     public void setDuration(int duration) { this.duration = duration; }
@@ -58,7 +58,7 @@ public class StudySession {
     @Override
     public String toString() {
         return String.format(
-                "ID: %s, Subject: %s, Topic: %s, Duration: %d, Comprehension: %d, Time: %s",
+                "ID: %d, Subject: %s, Topic: %s, Duration: %d, Comprehension: %d, Time: %s",
                 id, subject, topic, duration, comprehension, time
         );
     }

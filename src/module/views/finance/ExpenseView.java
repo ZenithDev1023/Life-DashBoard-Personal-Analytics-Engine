@@ -5,8 +5,12 @@ import enums.CategoryType;
 
 public class ExpenseView {
     
-    public void display(String id, double amount, CategoryType category, LocalDate date, String description) {
+    public StringBuilder display(int id) {
+        StringBuilder sb = new StringBuilder();
+
         System.out.println("");
+
+        return sb;
     }
 
     public void showList() {

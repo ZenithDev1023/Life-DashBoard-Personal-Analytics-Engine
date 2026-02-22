@@ -6,7 +6,7 @@ import utils.validation.ValidateHealth;
 
 public class Sleep {
     // Fields
-    private String id = "UNASSIGNED";
+    private int id = 0;
     private double hours = 0.0;
     private int quality = 0;
     private LocalDate date = null;
@@ -14,7 +14,7 @@ public class Sleep {
 
     // Constructor
     public Sleep(
-            String id,
+            int id,
             double hours,
             int quality,
             LocalDate date,
@@ -35,14 +35,14 @@ public class Sleep {
 
 
     // Getters
-    public String getId() { return id; }
+    public int getId() { return id; }
     public double getHours() { return hours; }
     public int getQuality() { return quality; }
     public LocalDate getDate() { return date; }
     public String getNotes() { return notes; }
 
     // Setters
-    public void setId(String id) { this.id = id; }
+    public void setId(int id) { this.id = id; }
     public void setHours(double hours) { this.hours = hours; }
     public void setQuality(int quality) { this.quality = quality; }
     public void setDate(LocalDate date) { this.date = date; }
@@ -51,7 +51,7 @@ public class Sleep {
     @Override
     public String toString() {
         return String.format(
-                "ID: %s, Hours: %.2f, Quality: %d, Date: %s, Notes: %s",
+                "ID: %d, Hours: %.2f, Quality: %d, Date: %s, Notes: %s",
                 id, hours, quality, date, notes
         );
     }

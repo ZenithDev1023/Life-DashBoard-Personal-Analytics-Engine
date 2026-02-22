@@ -2,9 +2,13 @@ package views.learning;
 
 import java.time.LocalDateTime;
 
-public class StudyView {
-    public void display(String id, String subject, String topic, int duration, int comprehension, LocalDateTime time) {
+import javax.sql.rowset.spi.SyncResolver;
 
+public class StudyView {
+    public StringBuilder display(int id) {
+        StringBuilder sb = new StringBuilder();
+
+        return sb;
     }
 
     public void showProgress() {

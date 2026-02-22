@@ -6,7 +6,7 @@ import utils.validation.ValidateFinance;
 
 public class Income {
     // Fields
-    private String id = "UNASSIGNED";
+    private int incomeId = 0;
     private double amount = 0.0;
     private String source = "UNASSIGNED";
     private LocalDate date = null;
@@ -16,18 +16,18 @@ public class Income {
     public Income() {}
 
     public Income(
-        String id,
+        int incomeId,
         double amount,
         String source,
         LocalDate date,
         boolean recur
     ) {
-        ValidateFinance.validateId(id);
+        ValidateFinance.validateId(incomeId);
         ValidateFinance.validateAmount(amount);
         ValidateFinance.validateSource(source);
         ValidateFinance.validateDate(date);
 
-        this.id = id;
+        this.incomeId = incomeId;
         this.amount = amount;
         this.source = source;
         this.date = date;
@@ -37,14 +37,14 @@ public class Income {
 
 
     // Getters
-    public String getId() { return id; }
+    public int getId() { return incomeId; }
     public double getAmount() { return amount; }
     public String getSource() { return source; }
     public LocalDate getDate() { return date; }
     public boolean getRecur() { return recur; }
 
     // Setters
-    public void setId(String id) { this.id = id; }
+    public void setId(int incomeId) { this.incomeId = incomeId; }
     public void setAmount(double amount) { this.amount = amount; }
     public void setSource(String source) { this.source = source; }
     public void setDate(LocalDate date) { this.date = date; }
@@ -53,8 +53,8 @@ public class Income {
     @Override
     public String toString() {
         return String.format(
-            "ID: %s, Amount: %.2f, Source: %s, Date: %s, recur: %b",
-            id, amount, source, date, recur
+            "ID: %d, Amount: %.2f, Source: %s, Date: %s, recur: %b",
+            incomeId, amount, source, date, recur
         );
     }
 }

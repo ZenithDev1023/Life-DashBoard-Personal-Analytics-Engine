@@ -4,8 +4,12 @@ import java.time.LocalDate;
 
 public class IncomeView {
 
-    public void display(String id, double amount, String source, LocalDate date, boolean recur) {
+    public StringBuilder display(int id) {
+        StringBuilder sb = new StringBuilder();
 
+        System.out.println("");
+
+        return sb;
     }
 
     public void showList() {

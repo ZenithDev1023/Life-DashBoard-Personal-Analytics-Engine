@@ -7,18 +7,18 @@ import utils.validation.ValidateLearning;
 
 public class Book {
     // Fields
-    private String id = "UNASSIGNED";
+    private int id = 0;
     private String title = "UNASSIGNED";
     private String author = "UNASSIGNED";
     private int pages = 0;
     private int pagesRead = 0;
     private int rating = 0;
-    private LocalDateTime start = null;
-    private LocalDateTime finish = null;
+    private LocalDateTime start;
+    private LocalDateTime finish;
 
     // Constructor
     public Book(
-            String id,
+            int id,
             String title,
             String author,
             int pages,
@@ -45,7 +45,7 @@ public class Book {
 
 
     // Getters
-    public String getId() { return id; }
+    public int getId() { return id; }
     public String getTitle() { return title; }
     public String getAuthor() { return author; }
     public int getPages() { return pages; }
@@ -54,7 +54,7 @@ public class Book {
     public LocalDateTime getFinish() { return finish; }
 
     // Setters
-    public void setId(String id) { this.id = id; }
+    public void setId(int id) { this.id = id; }
     public void setTitle(String title) { this.title = title; }
     public void setAuthor(String author) { this.author = author; }
     public void setPages(int pages) { this.pages = pages; }
@@ -65,7 +65,7 @@ public class Book {
     @Override
     public String toString() {
         return String.format(
-                "ID: %s, Title: %s, Author: %s, Total Pages: %d, Pages Read: %d, Start: %s, Finish: %s",
+                "ID: %d, Title: %s, Author: %s, Total Pages: %d, Pages Read: %d, Start: %s, Finish: %s",
                 id, title, author, pages, pagesRead, start, finish
         );
     }

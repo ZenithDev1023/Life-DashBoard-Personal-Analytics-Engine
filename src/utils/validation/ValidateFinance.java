@@ -6,9 +6,9 @@ import enums.CategoryType;
 
 public class ValidateFinance {
 
-    public static void validateId(String id) {
-        if (id == null || id.trim().isEmpty()) {
-            throw new IllegalArgumentException("ID cannot be null or empty");
+    public static void validateId(int expenseId) {
+        if (expenseId < 0) {
+            throw new IllegalArgumentException("ID cannot be negative!");
         }
     }
 

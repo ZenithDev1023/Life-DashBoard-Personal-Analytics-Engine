@@ -4,9 +4,9 @@ import java.time.LocalDateTime;
 
 public class ValidateLearning {
 
-    public static void validateId(String id) {
-        if (id == null || id.trim().isEmpty()) {
-            throw new IllegalArgumentException("Id cannot be null or empty!");
+    public static void validateId(int incomeId) {
+        if (incomeId < 0) {
+            throw new IllegalArgumentException("ID cannot be negative!");
         }
     }
 

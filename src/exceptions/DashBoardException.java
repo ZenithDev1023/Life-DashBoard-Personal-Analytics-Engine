@@ -1,6 +1,6 @@
 package exceptions;
 
-public class DashBoardException extends RuntimeException {
+public class DashBoardException extends Exception {
     public DashBoardException(String message) {
         super(message);
     }

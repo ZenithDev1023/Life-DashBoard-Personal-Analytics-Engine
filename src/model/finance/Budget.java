@@ -4,7 +4,7 @@ import utils.validation.ValidateFinance;
 
 public class Budget {
     // Fields
-    private String id= "UNASSIGNED";
+    private int budgetId = 0;
     private String name = "UNASSIGNED";
     private double limit = 0.0;
     private double spent = 0.0;
@@ -15,19 +15,19 @@ public class Budget {
 
 
     public Budget(
-        String id,
+        int budgetId,
         String name, 
         double limit,
         double spent,
         String period
     ) {
-        ValidateFinance.validateId(id);
+        ValidateFinance.validateId(budgetId);
         ValidateFinance.validateName(name);
         ValidateFinance.validateLimit(limit);
         ValidateFinance.validateSpent(spent);
         ValidateFinance.validatePeriod(period);
         
-        this.id = id;
+        this.budgetId = budgetId;
         this.name = name;
         this.limit = limit;
         this.spent = spent;
@@ -38,14 +38,14 @@ public class Budget {
 
 
     // Getters
-    public String getId() { return id; }
+    public int getId() { return budgetId; }
     public String getName() { return name; }
     public double getLimit() { return limit; }
     public double getSpent() { return spent; }
     public String getPeriod() { return period; }
 
     // Setters
-    public void setId(String id) { this.id = id; }
+    public void setId(int budgetId) { this.budgetId = budgetId; }
     public void setName(String name) { this.name = name; }
     public void setLimit(double limit) { this.limit = limit; }
     public void setSpent(double spent) { this.spent = spent; }
@@ -55,8 +55,8 @@ public class Budget {
     @Override
     public String toString() {
         return String.format(
-            "ID: %s, Name: %s, Limit: %.2f, Spent: %.2f Period %s",
-            id, name, limit, spent, period
+            "ID: %d, Name: %s, Limit: %.2f, Spent: %.2f Period %s",
+            budgetId, name, limit, spent, period
         );
     }
     

@@ -1,4 +1,6 @@
-package exceptions;
+package exceptions.finance;
+
+import exceptions.DashBoardException;
 
 public class FinanceException extends DashBoardException {
     public FinanceException(String message) {

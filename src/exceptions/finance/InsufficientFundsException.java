@@ -1,4 +1,6 @@
-package exceptions;
+package exceptions.finance;
+
+import exceptions.DashBoardException;
 
 public class InsufficientFundsException extends DashBoardException {
     public InsufficientFundsException(String message) {

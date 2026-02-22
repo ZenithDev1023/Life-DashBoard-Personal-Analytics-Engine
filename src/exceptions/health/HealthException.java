@@ -1,4 +1,6 @@
-package exceptions;
+package exceptions.health;
+
+import exceptions.DashBoardException;
 
 public class HealthException extends DashBoardException {
     public HealthException(String message) {

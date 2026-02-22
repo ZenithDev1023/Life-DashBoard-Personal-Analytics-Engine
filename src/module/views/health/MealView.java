@@ -5,8 +5,13 @@ import java.time.LocalDateTime;
 import enums.MealType;
 
 public class MealView {
-    public void display(String id, String name, int calories, MealType type, LocalDateTime time) {
 
+    private String name;
+
+    public StringBuilder display(int id, String name) {
+        StringBuilder sb = new StringBuilder();
+
+        return sb;
     }
 
     public void showMealPlan() {
@@ -20,4 +25,6 @@ public class MealView {
     public void printMealType() {
 
     }
+
+    public String getName() { return name; }
 }

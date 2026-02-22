@@ -4,8 +4,10 @@ import java.time.LocalDate;
 
 public class SleepView {
 
-    public void display( String id, double hours, int quality, LocalDate date, String notes) {
+    public StringBuilder display(int id) {
+        StringBuilder sb = new StringBuilder();
 
+        return sb;
     }
 
     public void showQuality() {
