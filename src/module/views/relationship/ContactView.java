@@ -4,8 +4,10 @@ import java.time.LocalDate;
 
 public class ContactView {
     
-    public void display(String id, String name, String email, String phone, LocalDate birthday, String category) {
+    public StringBuilder display(int id) {
+        StringBuilder sb = new StringBuilder();
 
+        return sb;
     }
 
     public void showList() {

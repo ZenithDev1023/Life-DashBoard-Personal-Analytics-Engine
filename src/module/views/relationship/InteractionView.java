@@ -6,8 +6,10 @@ import enums.InteractionType;
 
 public class InteractionView {
     
-    public void display(String id, String interaction, InteractionType type, LocalDateTime time, String notes) {
+    public StringBuilder display(int id) {
+        StringBuilder sb = new StringBuilder();
 
+        return sb;
     }
 
     public void showHistory() {

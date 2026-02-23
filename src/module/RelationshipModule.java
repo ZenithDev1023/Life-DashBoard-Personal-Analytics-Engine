@@ -1,9 +1,14 @@
 import java.util.Scanner;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import views.*;
 import views.relationship.ContactView;
 import views.relationship.InteractionView;
 import service.Relationship.RelationShipService;
+
+import enums.InteractionType;
 
 public class RelationshipModule {
     // Fields
@@ -74,19 +79,62 @@ public class RelationshipModule {
 
 
     public void addContact() {
+        System.out.print("ID: ");
+        int id = Integer.parseInt(scanner.nextLine());
 
+        System.out.print("Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Email: ");
+        String email = scanner.nextLine();
+
+        System.out.print("Phone: ");
+        String phone = scanner.nextLine();
+
+        System.out.print("Birthday: ");
+        LocalDate brithday = LocalDate.parse(scanner.nextLine());
+
+        System.out.print("Category: ");
+        String category = scanner.nextLine();
+
+        relationshipService.addContact(id, name, email, phone, brithday, category);
+        System.out.println("Contact added successfully!");
     }
+
 
     public void logInteraction() {
+        System.out.print("ID: ");
+        int id = Integer.parseInt(scanner.nextLine());
 
+        System.out.print("Interaction");
+        String interaction = scanner.nextLine();
+
+        System.out.print("Interaction Type (CALL/TEXT/EMAIL/MEETING/SOCIAL/GIFT): ");
+        InteractionType type = InteractionType.valueOf(scanner.nextLine().toUpperCase());
+
+        System.out.print("Time: ");
+        LocalDateTime time = LocalDateTime.parse(scanner.nextLine());
+
+        System.out.print("Notes: ");
+        String notes = scanner.nextLine();
+
+        relationshipService.logInteraction(id, interaction, type, time, notes);
+        System.out.println("Interaction logged successfully!");
     }
 
-    public void viewContact() {
 
+    public void viewContact() {
+        System.out.print("ID: ");
+        int id = Integer.parseInt(scanner.nextLine());
+
+        System.out.println(contactView.display(id));
     }
 
     public void viewInteraction() {
+        System.out.print("ID: ");
+        int id = Integer.parseInt(scanner.nextLine());
 
+        System.out.println(interactionView.display(id));
     }
 
     public void analyze() {

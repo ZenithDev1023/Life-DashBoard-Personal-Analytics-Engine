@@ -2,8 +2,11 @@ package service.Relationship;
 
 import java.util.List;
 
+import enums.InteractionType;
 import model.relationship.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class RelationShipService {
@@ -22,13 +25,23 @@ public class RelationShipService {
 
 
     // methods
-    public void addContact() {
+    public Contact addContact(int id, String name, String email, String phone, LocalDate birthday, String category) {
+        Contact contact = new Contact(id, name, email, phone, birthday, category);
 
+        contacts.add(contact);
+        System.out.println("Successfully added contact!");
+
+        return contact;
     }
 
 
-    public void logInteraction() {
+    public Interactions logInteraction(int id, String interaction, InteractionType type, LocalDateTime time, String notes) {
+        Interactions i = new Interactions(id, interaction, type, time, notes);
 
+        interactions.add(i);
+        System.out.println("Interaction added successfully!");
+
+        return i;
     }
 
 

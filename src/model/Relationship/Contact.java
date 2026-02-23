@@ -6,7 +6,7 @@ import utils.validation.ValidateRelationship;
 
 public class Contact {
     // Fields
-    private String id = "UNASSIGNED";
+    private int id = 0;
     private String name = "UNASSIGNED";
     private String email = "UNASSIGNED";
     private String phone = "UNASSIGNED";
@@ -15,7 +15,7 @@ public class Contact {
 
     // Constructor
     public Contact(
-            String id,
+            int id,
             String name,
             String email,
             String phone,
@@ -39,7 +39,7 @@ public class Contact {
 
 
     // Getters
-    public String getId() { return id; }
+    public int getId() { return id; }
     public String getName() { return name; }
     public String getEmail() { return email; }
     public String getPhone() { return phone; }
@@ -47,7 +47,7 @@ public class Contact {
     public String getCategory() { return category; }
 
     // Setters
-    public void setId(String id) { this.id = id; }
+    public void setId(int id) { this.id = id; }
     public void setName(String name) { this.name = name; }
     public void setEmail(String email) { this.email = email; }
     public void setPhone(String phone) { this.phone = phone; }
@@ -57,7 +57,7 @@ public class Contact {
     @Override
     public String toString() {
         return String.format(
-                "ID: %s, Name: %s, Email: %s, Phone: %s, Birthday: %s, Category: %s",
+                "ID: %d, Name: %s, Email: %s, Phone: %s, Birthday: %s, Category: %s",
                 id, name, email, phone, birthday, category
         );
     }

@@ -100,4 +100,22 @@ public class ValidateHealth {
             throw new IllegalArgumentException("Stress must be positive!");
         }
     }
+
+    public static void validateAge(int age) {
+        if (age < 0 || age > 120) {
+            throw new IllegalArgumentException("Age must be more than 0 and less than 120");
+        }
+    } 
+
+    public static void validateHeight(int height) {
+        if (height < 100 || height > 270) {
+            throw new IllegalArgumentException("Height must be more than 100cm but less than 270cm");
+        }
+    }
+
+    public static void validateWeight(double weight) {
+        if (weight < 50  || weight > 800) {
+            throw new IllegalArgumentException("Weight must be more than 50lbs but less than 800lbs");
+        }
+    }
 }
